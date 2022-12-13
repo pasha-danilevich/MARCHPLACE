@@ -11,12 +11,6 @@
   --green-color: #3abe18;
   --orange-color: #e16c1c;
   --purple-color: #AC167B;
-  --scrollbarBgColor: rgba(0, 0, 0, .05);
-  --scrollbarThumbColor: rgba(0, 0, 0, .15);
-  --scrollbarThumbColorSecond: rgba(255, 255, 255, .7);
-  --scrollbarWidth: 16px;
-  --scrollbarBorder: 0 solid var(--scrollbarBgColor);
-  --scrollbarBorderRadius: calc(var(--scrollbarWidth) / 4);
 }
 
 body {
@@ -59,9 +53,6 @@ body .slider {
 body .author-list {
   margin-top: 40px;
 }
-body .author-list .title {
-  color: white;
-}
 body .author-list .wrapper {
   display: flex;
   overflow-x: scroll;
@@ -73,16 +64,28 @@ body .author-list .wrapper .author {
   align-items: center;
   width: 100px;
   height: inherit;
+  display: flex;
 }
 body .author-list .wrapper .author .avatar {
-  border: solid 1px var(--purple-color);
   border-radius: 100%;
   width: 90px;
   height: 90px;
   margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+body .author-list .wrapper .author .avatar img {
+  position: absolute;
+  -webkit-clip-path: circle(50%);
+          clip-path: circle(50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: inherit;
+  height: inherit;
 }
 body .author-list .wrapper .author .name {
-  border: solid 1px var(--purple-color);
+  text-align: center;
   width: inherit;
   height: 20 px;
 }
@@ -100,8 +103,47 @@ body .wrapper::-webkit-scrollbar-thumb {
   background-color: #7e7e7e;
   border-radius: 20px;
 }
-body .produt-list {
+body .product-list {
   width: 100%;
+  margin-top: 40px;
+}
+body .product-list .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+body .product-list .wrapper .product {
+  min-width: 50%;
+  border: solid 1px var(--purple-color);
+  margin-bottom: 10px;
+}
+body .product-list .wrapper .product .image {
+  width: inherit;
+  height: 180px;
+  border: solid 1px var(--purple-color);
+}
+body .product-list .wrapper .product .info {
+  width: inherit;
+  height: 45px;
+  background-color: var(--main-color);
+}
+body .product-list .wrapper .product .info .name {
+  width: inherit;
+  border: solid 1px var(--purple-color);
+}
+body .product-list .wrapper .product .info .author {
+  width: inherit;
+  border: solid 1px var(--purple-color);
+}
+body .product-list .wrapper .product .info .action {
+  width: inherit;
+  border: solid 1px var(--purple-color);
+  display: flex;
+}
+body .product-list .wrapper .product .info .action .price {
+  width: inherit;
+}
+body .product-list .wrapper .product .info .action .icons {
+  width: inherit;
 }
 body footer {
   width: 100%;
