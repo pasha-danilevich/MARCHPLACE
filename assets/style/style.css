@@ -14,9 +14,20 @@ body header nav {
   border-color: #D81B31;
   padding: 15px 15px;
 }
+body header nav a.svg:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+}
 body header nav .merch-button {
   margin: 0px 10px 0px 0px;
-  cursor: pointer;
+  width: 30px;
+  height: 30px;
 }
 body header nav .merch-button-menu {
   float: right;
@@ -29,4 +40,12 @@ body .produt-list {
 }
 body footer {
   width: 100%;
+}
+
+#parallelogram {
+  width: 25px;
+  height: 25px;
+  background: #d81b31;
+  transform: skew(-15deg);
+  display: block;
 }/*# sourceMappingURL=style.css.map */
